@@ -40,7 +40,7 @@ func lessers(M Medable, F float32, B int, E int) int {
 	}
 
 	if t < F && (idx == len(a)-1 || (float32(a[idx+1]) == F && !M.IsFirst) || float32(a[idx+1]) > F) {
-		return idx
+		return idx + 1
 	}
 	if t < F {
 		return lessers(M, F, idx+1, E)
